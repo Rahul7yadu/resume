@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { GitHubLogoIcon,LinkedInLogoIcon,TwitterLogoIcon } from "@radix-ui/react-icons"
+import { GitHubLogoIcon,LinkedInLogoIcon,TwitterLogoIcon ,FileIcon } from "@radix-ui/react-icons"
 const Footer = () => {
   return (
     <section className="w-full  mb-4 p-2" id="connect">
@@ -21,10 +21,15 @@ const Footer = () => {
         <TwitterLogoIcon width={50} height={50}/>
        
       </Link>
+      <Link href='/rahul_yadu_resume.pdf' target="_blank" rel="noopener noreferrer">
+        Resume
+        <FileIcon width={50} height={50}/>
+      </Link>
       <Link href='mailto:rahulyadu17@gmail.com'>
         Email
         <Image src='/mail.svg' alt='github' width={50} height={50}/>
       </Link>
+      
     </div>
     </section>
   )
