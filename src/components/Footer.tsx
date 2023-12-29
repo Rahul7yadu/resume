@@ -21,7 +21,7 @@ const Footer = () => {
         <TwitterLogoIcon width={50} height={50}/>
        
       </Link>
-      <Link href='/rahul_yadu_resume.pdf' target="_blank" rel="noopener noreferrer">
+      <Link href='/Rahul_yadu_resume.pdf' target="_blank" rel="noopener noreferrer">
         Resume
         <FileIcon width={50} height={50}/>
       </Link>
