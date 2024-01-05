@@ -13,12 +13,13 @@ const Header = () => {
 
    const {setTheme,theme} = useTheme()
     const themeType = theme ==='dark'?true:false
+    
 
   return (
     <main className=" text-lg flex justify-between items-center w-full bg-background text-foreground fixed p-4 top-0 opacity-90" >
         <div className="flex">
         <SunIcon  width={20} height={20}/> 
-        <Switch onCheckedChange={(e)=>setTheme(e?'dark':'light')} checked={themeType}  />
+        <Switch onCheckedChange={(e)=>setTheme(e?'dark':'light')} checked={themeType} />
         <MoonIcon width={20} height={20}/>
             </div> 
       <nav className=" hidden sm:flex justify-between items-center w-1/2 ml-10">
