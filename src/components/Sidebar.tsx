@@ -11,10 +11,10 @@ const Sidebar = () => {
     })
 
   return (
-    <div className="sm:hidden">
+    <div className="sm:hidden ">
      
     <Sheet onOpenChange={()=>setOpen(prev=>!prev)} open={open} modal={false} >
-        <SheetTrigger>
+        <SheetTrigger className="z-10">
         <HamburgerMenuIcon width={30} height={30}/>
         </SheetTrigger>
         <SheetContent ref={HamRef} className="max-w-[250px]">

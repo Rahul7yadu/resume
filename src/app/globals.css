@@ -7,6 +7,19 @@
   transition-duration: 1s;
 }
 
+#projects , #skills{
+  scale:.8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range:100px 500px ;
+}
+
+
+@keyframes fade-in {
+  to {scale:1 ; opacity:1}
+}
+
+
 
 @layer base {
     :root {

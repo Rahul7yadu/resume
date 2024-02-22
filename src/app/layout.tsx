@@ -5,7 +5,8 @@ import { ThemeProvider } from '@/components/theme-provider'
 const inter = Inter({ weight: ['400'], subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'portfolio',
+  icons:'/triangle1.svg',
+  title: 'Rahul-yadu',
   description: 'portfolio website  of rahul yadu',
 }
 

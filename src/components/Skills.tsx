@@ -31,6 +31,11 @@ const skillArray = [
       icon: '/react-router.svg',
     },
     {
+      title:'React Native',
+      expertise:'5',
+      icon:'/react-native-icon.png'
+    },
+    {
       title: 'MaterialUI',
       expertise: '7.5',
       icon: '/material-ui.svg',
