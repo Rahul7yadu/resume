@@ -19,20 +19,28 @@ const Projects = () => {
             githubUrl:"https://github.com/Rahul7yadu/movies-ai"
         },
         {
-            title: 'Moviestan',
-            skills: ['Typescript', 'ReactJs', 'Nextjs', 'TailwindCSS', 'TmdbAPI'],
-            image: '/moviestan-dark.png',
-            url: 'https://moviestan.vercel.app/',
-            description:'a movie website to search and surf for movies',
-            githubUrl:"https://github.com/Rahul7yadu/movie-app"
-        },
-        {
             title: 'Devconnect',
            skills: ['JavaScript', 'ReactJs', 'Redux', 'Nodejs', 'Expressjs', 'mongoDB'],
             image: '/devconnect.png',
             url: 'https://devconnector-rahul.cyclic.app/',
             description:'connect with developer around the world and share experience',
             githubUrl:"https://github.com/Rahul7yadu/Devconnect3"
+        },
+        {
+            title: 'E-commerce Website',
+            skills: ["stripe",'JavaScript', 'ReactJs', 'Reduxjs/Redux-toolkit','Nodejs','webhooks','MongoDb'],
+            image: '/ecommerce.png',
+            url: "https://e-commerce-backend-rosy.vercel.app/",
+            description:'a full stack e commerce platform for buying products along with payment system',
+            githubUrl:"https://github.com/Rahul7yadu/e-commerce-frontend"
+        },
+        {
+            title: 'Moviestan',
+            skills: ['Typescript', 'ReactJs', 'Nextjs', 'TailwindCSS', 'TmdbAPI'],
+            image: '/moviestan-dark.png',
+            url: 'https://moviestan.vercel.app/',
+            description:'a movie website to search and surf for movies',
+            githubUrl:"https://github.com/Rahul7yadu/movie-app"
         },
        
         {
@@ -64,6 +72,7 @@ const Projects = () => {
     return (
         <section className='w-full' id='projects'>
             <h2 className='text-4xl text-center mb-5 '>Some personel projects</h2>
+            <hr className='w-full h-4 bg-red-500 mb-4 rounded-sm'/>
         <div className='grid sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-4 w-full place-items-center '>
             {
             projects.map((project) => {
@@ -87,7 +96,7 @@ export default Projects
 
 function Project({title,image,url,skills,description,githubUrl}:ProjectProps) {
     return(
-    <Card className="w-[350px] sm:w-[400px] border-2 border-stone-500">
+    <Card className="w-[350px] sm:w-[400px] border-2 border-stone-500 cursor-pointer hover:scale-110 transition-all">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
@@ -100,8 +109,8 @@ function Project({title,image,url,skills,description,githubUrl}:ProjectProps) {
         <div className='flex flex-wrap'>
         {skills.map((skill)=><p className='m-2' key={skill}>{skill}</p>)}
         </div>
-        <Link href={url} target='_blank'><Button variant={'link'} ><GlobeIcon/></Button></Link>
-        <Link href={githubUrl} target='_blank'> <GithubIcon/></Link>
+        <Link href={url} target='_blank' className='transition-all '><Button variant={'link'} ><GlobeIcon className='hover:text-blue-500'/></Button></Link>
+        <Link href={githubUrl} target='_blank' className=' transition-all'> <GithubIcon className='hover:text-red-700'/></Link>
       </CardFooter>
     </Card>)
 }

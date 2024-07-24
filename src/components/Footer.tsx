@@ -3,7 +3,8 @@ import Image from "next/image"
 import { GitHubLogoIcon,LinkedInLogoIcon,TwitterLogoIcon ,FileIcon } from "@radix-ui/react-icons"
 const Footer = () => {
   return (
-    <section className="w-full  mb-4 p-2" id="connect">
+    <section className="w-full  mb-4 p-6 " id="connect">
+      <hr className="w-full h-2 rounded-sm bg-red-500"/>
       <h2 className="text-center mb-5">Connect with me</h2>
     <div  className="flex justify-between items-center w-full">
       <Link href='https://github.com/Rahul7yadu'>
@@ -29,7 +30,6 @@ const Footer = () => {
         Email
         <Image src='/mail.svg' alt='github' width={50} height={50}/>
       </Link>
-      
     </div>
     </section>
   )
