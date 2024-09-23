@@ -109,15 +109,16 @@ const skillArray = [
 
 const Skills = () => {
   return (
-    <section className="w-full mt-10 mb-5 h-screen bg-white text-black"  id='skills'>
-      <h2 className="text-2xl text-center mb-8">Things I know</h2>
+    <section className="w-full mt-10 mb-5 h-screen bg-white text-black "  id='skills'>
+      <h2 className="text-2xl text-center mb-8 ">Things I know</h2>
       <hr className="w-full h-2 bg-red-500 rounded-md mb-4"/>
     <div className="grid w-full items-center sm:grid-cols-5 gap-8 grid-cols-4 place-items-center text-black bg-slate-50">
         {skillArray.map((skill)=>{
         return (
-        <div key={skill.icon} className="hover:scale-125 cursor-pointer border-2 p-4 rounded-sm transition-all hover:bg-fuchsia-900/30 hover:text-purple-600 min-w-4 max-w-xs">
-        {skill.title}
+        <div key={skill.icon} >
+       {skill.title}
         <Image src = {skill.icon} width={40} height={40} alt="skill icon" />
+        
         </div>)
         })}
     </div>

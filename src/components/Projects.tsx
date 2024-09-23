@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+import "./ui/styles/borders.css"
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from './ui/button'
@@ -7,8 +8,6 @@ type ProjectProps = {
     title:string,image:string,url:string,skills:string[],description:string,githubUrl:string
     }
 type ProjectsArray = ProjectProps[]
-const Projects = () => {
-
     const projects:ProjectsArray = [
         {
             title: 'Movies Ai',
@@ -69,6 +68,8 @@ const Projects = () => {
         },
        
     ]
+const Projects = () => {
+
     return (
         <section className='w-full' id='projects'>
             <h2 className='text-4xl text-center mb-5 '>Some personel projects</h2>
@@ -96,7 +97,7 @@ export default Projects
 
 function Project({title,image,url,skills,description,githubUrl}:ProjectProps) {
     return(
-    <Card className="w-[350px] sm:w-[400px] border-2 border-stone-500 cursor-pointer hover:scale-110 transition-all">
+    <Card className="w-[350px] sm:w-[400px] border-2 border-stone-500 cursor-pointer hover:scale-110 transition-all ">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
