@@ -1,0 +1,1 @@
+.border-card:after{content:"";position:absolute;height:100%;width:100%;background-image:conic-gradient(red,blue,green,purple,#f0f,red);top:50%;left:50%;transform:translate(-50%,-50%);z-index:-1;padding:3px;border-radius:10px}
