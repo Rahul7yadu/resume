@@ -25,10 +25,10 @@ const Header = () => {
       <main className=" text-lg flex justify-between items-center w-full bg-background text-foreground fixed p-4 top-0 opacity-90 z-10">
         <div className="flex">
           <Button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-            {theme === "dark" ? (
-              <SunIcon width={20} height={20} />
-            ) : (
+            {theme == "light" ? (
               <MoonIcon width={20} height={20} />
+            ) : (
+              <SunIcon width={20} height={20} />
             )}
           </Button>
         </div>
@@ -45,7 +45,7 @@ const Header = () => {
         style={{
           width: `${width}%`,
           backgroundColor: "red",
-          height: 5,
+          height: 1,
           position: "fixed",
           zIndex: 10,
           top: "60px",

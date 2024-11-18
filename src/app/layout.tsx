@@ -2,12 +2,24 @@ import type { Metadata } from 'next'
 import { Inter} from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
+import Dot from '@/components/animata/background/Dot'
 const inter = Inter({ weight: ['400'], subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  icons:'/triangle1.svg',
-  title: 'Rahul-yadu',
-  description: 'portfolio website  of rahul yadu',
+  icons:'/code.png',
+  title: 'Rahul yadu',
+  description: 'Rahul yadu is a software engineer who has experience in Full Stack Web Development (MERN stack) . he has also interest in networking and systems programming',
+  openGraph:{
+    title:"Rahul yadu Software Engineer",
+    description:"Rahul yadu is a software engineer who has experience in Full Stack Web Development (MERN stack) . he has also interest in networking and systems programming",
+    images:["/code.png"]
+  },
+  twitter:{
+    title:"Rahul yadu Software Engineer",
+    card:"summary",
+    description:"Rahul yadu is a software engineer who has experience in Full Stack Web Development (MERN stack) . he has also interest in networking and systems programming",
+    images:["/code.png"]
+  }
 }
 
 export default function RootLayout({
@@ -23,7 +35,10 @@ export default function RootLayout({
           
           enableSystem
         >
+          
+
           {children}
+          
         </ThemeProvider>
       </body>
     </html>

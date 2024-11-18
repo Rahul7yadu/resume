@@ -4,7 +4,7 @@ import { GitHubLogoIcon,LinkedInLogoIcon,TwitterLogoIcon ,FileIcon } from "@radi
 const Footer = () => {
   return (
     <section className="w-full  mb-4 p-6 " id="connect">
-      <hr className="w-full h-2 rounded-sm bg-red-500"/>
+      {/* <hr className="w-full h-2 rounded-sm bg-red-500"/> */}
       <h2 className="text-center mb-5">Connect with me</h2>
     <div  className="flex justify-between items-center w-full">
       <Link href='https://github.com/Rahul7yadu'>

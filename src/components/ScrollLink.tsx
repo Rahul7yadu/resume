@@ -14,7 +14,7 @@ const ScrollLink = ({ targetId, text }: { targetId: string, text: string }) => {
   }
   useEffect(() => {
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.2, // Adjust as needed
+      threshold: 0.1, // Adjust as needed
     });
     const sections = document.querySelectorAll('section')
     sections.forEach((section) => {

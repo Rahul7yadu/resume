@@ -73,8 +73,8 @@ const Projects = () => {
     return (
         <section className='w-full' id='projects'>
             <h2 className='text-4xl text-center mb-5 '>Some personel projects</h2>
-            <hr className='w-full h-4 bg-red-500 mb-4 rounded-sm'/>
-        <div className='grid sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-4 w-full place-items-center '>
+            {/* <hr className='w-full h-4 bg-red-500 mb-4 rounded-sm'/> */}
+        <div className='grid sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-8 w-full place-items-center '>
             {
             projects.map((project) => {
                 return (<Project title={project.title}
@@ -97,7 +97,8 @@ export default Projects
 
 function Project({title,image,url,skills,description,githubUrl}:ProjectProps) {
     return(
-    <Card className="w-[350px] sm:w-[400px] border-2 border-stone-500 cursor-pointer hover:scale-110 transition-all ">
+        <Link href={url}>
+    <Card className="w-[350px] sm:min-w-[450px] h-[450px] border-2 border-stone-500 cursor-pointer  transition-all ">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
@@ -113,5 +114,7 @@ function Project({title,image,url,skills,description,githubUrl}:ProjectProps) {
         <Link href={url} target='_blank' className='transition-all '><Button variant={'link'} ><GlobeIcon className='hover:text-blue-500'/></Button></Link>
         <Link href={githubUrl} target='_blank' className=' transition-all'> <GithubIcon className='hover:text-red-700'/></Link>
       </CardFooter>
-    </Card>)
+    </Card>
+    </Link>
+    )
 }
