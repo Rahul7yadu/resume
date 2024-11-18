@@ -15,9 +15,7 @@ const Intro = () => {
           <div className='text-foreground font-thin  ml-6 text-2xl xl:text-4xl bg-clip-text bg-gradient-to-t from-primary1-light via-primary1-medium to-primary1-dark'>
             A Passionate Full Stack Web developer
           </div>
-          <div>
-          passionate about creating intuitive, visually appealing, and high-performance web applications. With expertise in ReactJS, NextJS, and the MERN stack, I thrive on turning complex ideas into seamless user experiences
-          </div>
+          
     </section>
 
 
