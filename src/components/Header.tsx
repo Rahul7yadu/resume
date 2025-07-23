@@ -10,7 +10,7 @@ const Header = () => {
   const [width, setWidth] = useState(0);
   console.log(width);
   useEffect(() => {
-    const max = document.body.scrollHeight - 640;
+    const max = document.body.scrollHeight;
 
     window.onscroll = function () {
       const w = (window.scrollY / max) * 100;
@@ -21,8 +21,8 @@ const Header = () => {
   const { setTheme, theme } = useTheme();
 
   return (
-    <div className="w-full">
-      <main className=" text-lg flex justify-between items-center w-full bg-background text-foreground fixed p-4 top-0 opacity-90 z-10">
+    <div className="w-full ">
+      <main className=" text-lg flex justify-between items-center w-full bg-background text-foreground fixed opacity-90 z-10 p-4">
         <div className="flex">
           <Button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
             {theme == "light" ? (
@@ -32,7 +32,7 @@ const Header = () => {
             )}
           </Button>
         </div>
-        <nav className=" hidden sm:flex justify-between items-center w-1/2 ml-10">
+        <nav className=" hidden sm:flex justify-between items-center w-1/2 ">
           <ScrollLink targetId="intro" text="intro" />
           <ScrollLink targetId="projects" text="projects" />
           <ScrollLink targetId="skills" text="skills" />

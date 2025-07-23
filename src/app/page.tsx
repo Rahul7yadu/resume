@@ -11,12 +11,14 @@ export default function Home() {
   console.log(theme);
 
   return (
-    <main className="flex flex-col gap-20 items-center justify-center mx-10">
+    <main className="">
       <Header />
-      <Intro />
-      <Projects />
-      <Skills />
-      <Footer />
+      <div className="flex flex-col gap-20 items-center justify-center max-w-7xl mx-auto">
+        <Intro />
+        <Projects />
+        <Skills />
+        <Footer />
+      </div>
     </main>
   );
 }
