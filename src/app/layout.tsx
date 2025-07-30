@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import Navbar from "@/components/Navbar";
+import Contact from "@/components/Contact";
 const inter = Inter({ weight: ["400"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -31,10 +33,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider attribute="class" enableSystem>
+      <body className={`${inter.className} min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900`} >
+
+        <Navbar />
+        <div className="flex flex-col gap-20 items-center justify-center  mx-auto ">
           {children}
-        </ThemeProvider>
+        </div>
+        <Contact />
       </body>
     </html>
   );

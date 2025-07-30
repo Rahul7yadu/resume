@@ -5,6 +5,7 @@
 *{
   transition-property: background;
   transition-duration: 1s;
+  
 }
 
 #projects , #skills{
@@ -19,7 +20,9 @@
   to {scale:1 ; opacity:1}
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 @layer base {
     :root {

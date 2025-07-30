@@ -1,10 +1,10 @@
 "use client";
 
-import Header from "@/components/Header";
+import Experience from "@/components/Experience";
 import Intro from "@/components/Intro";
-import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
-import Footer from "@/components/Footer";
+import Projects from "@/components/ProjectsNew";
+import Skills from "@/components/SkillsNew";
+
 import { useTheme } from "next-themes";
 export default function Home() {
   const { theme } = useTheme();
@@ -12,13 +12,11 @@ export default function Home() {
 
   return (
     <main className="">
-      <Header />
-      <div className="flex flex-col gap-20 items-center justify-center max-w-7xl mx-auto">
-        <Intro />
-        <Projects />
-        <Skills />
-        <Footer />
-      </div>
+      <Intro />
+      <Experience />
+      <Projects />
+      <Skills />
+
     </main>
   );
 }

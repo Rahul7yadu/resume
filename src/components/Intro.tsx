@@ -1,21 +1,20 @@
 "use client"
-import {motion} from 'motion/react'
+import { motion } from 'motion/react'
+import Image from 'next/image'
 const Intro = () => {
   return (
 
-    <section className='flex flex-col  justify-center items-center text-center h-96 sm:h-screen' id='intro' >
+    <section className="flex flex-col  justify-center items-center text-center min-h-screen  " id='intro'  >
+      <h1 className='sm:text-7xl text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent '>
+        <div className='flex  flex-col items-center justify-center gap-4'>
+          <Image src={'/react.svg'} alt='react logo' width={80} height={80} /> <span>Hi, I am{' '}Rahul</span>
+        </div>
+      </h1>
+      <h2 className="sm:text-6xl text-4xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
 
-          <motion.div className='text-foreground text-2xl  ml-6  xl:text-4xl bg-clip-text  bg-backround' initial={{y:-100}} animate={{y:0}} transition={{duration:2}}>
-            Hi, I am{' '}
-            <span className='text-secondary-light animate-pulse font-extrabold text-4xl xl:text-6xl'>
-             Rahul 
-            </span>
-           
-          </motion.div>
-          <div className='text-foreground font-thin  ml-6 text-2xl xl:text-4xl bg-clip-text bg-gradient-to-t from-primary1-light via-primary1-medium to-primary1-dark'>
-            A Passionate Full Stack Web developer
-          </div>
-          
+        Building Web Solutions That Actually Solve Real Problems
+      </h2>
+
     </section>
 
 
