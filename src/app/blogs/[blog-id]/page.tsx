@@ -24,9 +24,8 @@ export default async function Blog({ params }: { params: { "blog-id": string } }
 
     return (
         <div className="flex flex-col items-center justify-center ">
-            <h1 className="text-3xl font-bold">Blog Page</h1>
-            <article className="prose prose-lg" dangerouslySetInnerHTML={{ __html: htmlContent }}>
-
+            <article className="prose prose-h1:text-white prose-h2:text-gray-200 prose-h3:text-gray-200 prose-strong:text-yellow-300 prose-p:text-white prose-li:text-white
+            prose-a:text-gray-100 prose-lg" dangerouslySetInnerHTML={{ __html: htmlContent }}>
             </article>
 
         </div>

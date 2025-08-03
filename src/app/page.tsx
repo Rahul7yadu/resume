@@ -1,22 +1,17 @@
-"use client";
 
 import Experience from "@/components/Experience";
 import Intro from "@/components/Intro";
 import Projects from "@/components/ProjectsNew";
 import Skills from "@/components/SkillsNew";
 
-import { useTheme } from "next-themes";
-export default function Home() {
-  const { theme } = useTheme();
-  console.log(theme);
 
+export default function Home() {
   return (
-    <main className="">
+    <main >
       <Intro />
       <Experience />
       <Projects />
       <Skills />
-
     </main>
   );
 }
