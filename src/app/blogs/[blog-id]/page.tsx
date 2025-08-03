@@ -3,6 +3,14 @@ import { readFile } from "fs/promises";
 import fs from "fs";
 import path from "path";
 import { notFound } from "next/navigation";
+
+export async function generateStaticParams() {
+
+
+    return [{
+        'blog-id': 'frappe-weasy', // Or post.id, depending on your API
+    }];
+}
 export default async function Blog({ params }: { params: { "blog-id": string } }) {
     const blogId = params["blog-id"];
     const filePath = path.join(process.cwd(), "src", "blogs", `${blogId}.md`);
