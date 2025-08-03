@@ -7,7 +7,7 @@ export default async function Blogs() {
     return (
         <div className="flex items-center justify-center h-screen">
 
-            <ul className="text-3xl font-bold text-white ">{blogs.map((blog) => (<li><Link href={`/blogs/${blog.replace('.md',
+            <ul className="text-3xl font-bold text-white ">{blogs.map((blog) => (<li key={blog}><Link href={`/blogs/${blog.replace('.md',
                 ''
             )}`}>{blog}</Link></li>))}</ul>
         </div>)
